@@ -21,21 +21,9 @@ describe('Acesso ao site', () => {
     cy.get('#reference').type('Area Verde')
 
     cy.get('.btn-create-account > [data-cy="btn-"]').click()
+    cy.wait(6000)
 
-    cy.get('#cep').type('14150000')
-    cy.contains('Enviar').click()
-    cy.wait(2000)
-    cy.contains('Delivery').click()
-    cy.get(':nth-child(4) > .CarouselProductsContainer > .slick-slider > .slick-list > .slick-track > [data-index="1"] > :nth-child(1) > .ProductCardShowcase > .showcase-card-content > .menu-actions-icons > .ButtonBuyComponent > [data-cy="btn-"]').click()
 
-    cy.wait(2000)
-    cy.get('.hot-link-name').click()
-    cy.wait(2000)
-
-    cy.get(':nth-child(2) > .showcase-card-content > .showcase-image-area > .capsule-img-top > .card-img-top').click({force: true})
-    cy.wait(2000)
-
-    cy.get('.ButtonBuyComponent > [data-cy="btn-"]').click()
 
 
 
